@@ -36,7 +36,8 @@
 						<a href="<?php bloginfo('url'); ?>"><img alt="logo" src="<?php echo $image['url']; ?>" /></a>					
 					</div>
 					</div>
-					<div class="header--right"></div>
+					<div class="header--right">
+					TESTING PIPLINE</div>
 					</div>
 
 					<!-- <div class="search">
