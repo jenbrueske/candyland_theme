@@ -1,1 +1,0 @@
-console.log("main.js file loaded"),console.log("this should be in the minified file");
