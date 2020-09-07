@@ -1,3 +1,41 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/open-sans/OpenSans-Regular.eot');
+    src: url('../../fonts/open-sans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/open-sans/OpenSans-Regular.woff2') format('woff2'),
+        url('../../fonts/open-sans/OpenSans-Regular.woff') format('woff'),
+        url('../../fonts/open-sans/OpenSans-Regular.ttf') format('truetype'),
+        url('../../fonts/open-sans/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/open-sans/OpenSans-Bold.eot');
+    src: url('../../fonts/open-sans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/open-sans/OpenSans-Bold.woff2') format('woff2'),
+        url('../../fonts/open-sans/OpenSans-Bold.woff') format('woff'),
+        url('../../fonts/open-sans/OpenSans-Bold.ttf') format('truetype'),
+        url('../../fonts/open-sans/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quintessential';
+    src: url('../../fonts/quintessential/Quintessential-Regular.eot');
+    src: url('../../fonts/quintessential/Quintessential-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/quintessential/Quintessential-Regular.woff2') format('woff2'),
+        url('../../fonts/quintessential/Quintessential-Regular.woff') format('woff'),
+        url('../../fonts/quintessential/Quintessential-Regular.ttf') format('truetype'),
+        url('../../fonts/quintessential/Quintessential-Regular.svg#Quintessential-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 /* Font Families */
 
 $header-font: 'Quintessential', cursive;
