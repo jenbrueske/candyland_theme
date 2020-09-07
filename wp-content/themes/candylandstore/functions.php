@@ -60,3 +60,13 @@ function wpdocs_theme_name_scripts() {
     wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/dist/js/main.js' );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
+
+function register_my_menus() {
+    register_nav_menus(
+      array(
+        'main-navigation' => __( 'Main Navigation' ),
+        'footer' => __( 'Footer' )
+      )
+    );
+  }
+  add_action( 'init', 'register_my_menus' );

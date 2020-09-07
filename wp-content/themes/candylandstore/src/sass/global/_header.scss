@@ -1,0 +1,25 @@
+.header {
+    .header--wrapper {
+    }
+    .header--flex {
+        padding: 30px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        background: url(/wp-content/themes/candylandstore/images/awning_bg.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+    }
+    .header--column {
+        flex-basis: 30%;
+        padding-bottom: 30px;
+    }
+    .logo {
+        max-width: 500px;
+    }
+    .btn {
+        
+    }
+}

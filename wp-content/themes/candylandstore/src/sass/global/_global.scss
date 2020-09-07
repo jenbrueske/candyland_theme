@@ -1,0 +1,31 @@
+.container {
+    max-width: $container;
+    margin: 0 auto;
+}
+
+.btn {
+    color: $white;
+    background-color: $maroon;
+    padding: 13px 17px;
+
+}
+
+a {
+    text-decoration: none;
+    font-family: $header-font;
+}
+
+.page-background {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.theme-candylandstore {
+    margin-top: 0px;
+}

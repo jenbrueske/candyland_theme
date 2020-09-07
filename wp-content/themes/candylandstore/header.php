@@ -22,37 +22,31 @@
 
 	<body <?php body_class(); ?> >
 		<div class="wrapper">
-
+		<?php $page_background_image = get_field('page_background_image', 'option'); ?>
+		<img class ="page-background" alt="background image" src="<?php echo $page_background_image['url']; ?>">
 			<header role="banner" class="header">
 				<a class="screen-reader-text skip-link" href="#main">Skip to content</a>
 				<div class="container">
+					<div class="header--wrapper">
 					<div class="header--flex">
-					<div class="header--left">
+					<div class="header--left header--column">
 						<a class="btn myAccount" href="/my-account/" target="_self">My Account</a>
 					</div>
-					<div class="header--center">
+					<div class="header--center header--column">
 					<div class="logo">
 						<?php $image = get_field('header_logo', 'option'); ?>
 						<a href="<?php bloginfo('url'); ?>"><img alt="logo" src="<?php echo $image['url']; ?>" /></a>					
 					</div>
 					</div>
-					<div class="header--right">
+					<div class="header--right header--column">
 					TESTING PIPLINE</div>
 					</div>
-
-					<!-- <div class="search">
-						<form method="get" id="searchform" class="searchform" action="<?php bloginfo('url'); ?>/">
-							<input type="text" value="" name="s" id="s" placeholder="Search&hellip;"/>
-							<input type="hidden" name="search-type" value="normal" />
-							<input name="submit" type="submit" value="Go" />
-						</form>
-					</div> -->
-
 					<div class=" nav">
 						<nav role="navigation" class="mainNav">
-							<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+							<?php wp_nav_menu( array( 'theme_location' => 'main-navigation' ) ); ?>
 						</nav>
 					</div>
+				</div>
 				</div>
 			</header>
 
