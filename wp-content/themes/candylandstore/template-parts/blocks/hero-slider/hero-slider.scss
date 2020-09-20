@@ -1,0 +1,34 @@
+// this is a test comment
+// .home p {
+//     color: blue !important;
+// }
+.heroSlider {
+    position: relative;
+    max-height: 350px;
+    height: 100%;
+    background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+    img {
+        max-width: 100%;
+        max-height: 350px;
+        height: auto;
+    }
+    .heroSlides {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease;
+        -webkit-transition: opacity 1s ease;
+        &.slick-initialized {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .slick-dots {
+        bottom: 5px;
+    }
+
+    .slick-dots li button:before {
+        font-size: 20px;
+    }
+
+}
+// second test comment

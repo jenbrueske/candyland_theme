@@ -15,12 +15,16 @@ var replace = require('gulp-replace');
 // File paths
 const files = { 
     scssPath: './src/sass/**/*.scss',
-    jsPath: './src/js/**/*.js'
+    jsPath: './src/js/**/*.js',
+    blockScssPath: './template-parts/blocks/**/*.scss',
+    blockJsPath: './template-parts/blocks/**/*.js'
 }
 
 // Sass task: compiles the style.scss file into style.css
 function scssTask(){    
-    return src(files.scssPath)
+    return src([
+        files.scssPath
+    ])
         .pipe(sourcemaps.init()) // initialize sourcemaps first
         .pipe(sass()) // compile SCSS to CSS
         .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
@@ -32,7 +36,8 @@ function scssTask(){
 // JS task: concatenates and uglifies JS files to script.js
 function jsTask(){
     return src([
-        files.jsPath
+        files.jsPath, 
+        files.blockJsPath
         //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
         ])
         .pipe(concat('all.js'))
@@ -52,7 +57,7 @@ function jsTask(){
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask(){
-    watch([files.scssPath, files.jsPath],
+    watch([files.scssPath, files.jsPath, files.blockScssPath, files.blockJsPath],
         {interval: 1000, usePolling: true}, //Makes docker work
         series(
             parallel(scssTask, jsTask)

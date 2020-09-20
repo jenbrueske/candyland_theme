@@ -43,7 +43,7 @@
 					</div>
 					<div class="header--right header--column">
 						<div class="headerImage">
-							<img alt="" src="wp-content/themes/candylandstore/images/Mpls-StPaul-Stillwater.png">
+							<img alt="" src="<?php echo get_template_directory_uri(); ?>/images/Mpls-StPaul-Stillwater.png">
 						</div>
 					</div>
 					</div>

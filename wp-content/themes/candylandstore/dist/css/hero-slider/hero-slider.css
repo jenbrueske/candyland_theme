@@ -1,0 +1,2 @@
+.heroSlider{position:relative;max-height:350px;height:100%;background:#fff slick-image-url("ajax-loader.gif") 50% no-repeat}.heroSlider img{max-width:100%;max-height:350px;height:auto}.heroSlider .heroSlides{opacity:0;visibility:hidden;transition:opacity 1s ease;-webkit-transition:opacity 1s ease}.heroSlider .heroSlides.slick-initialized{visibility:visible;opacity:1}.heroSlider .slick-dots{bottom:5px}.heroSlider .slick-dots li button:before{font-size:20px}
+/*# sourceMappingURL=hero-slider.css.map */

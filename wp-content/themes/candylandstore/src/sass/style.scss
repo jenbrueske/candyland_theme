@@ -3,16 +3,19 @@
 @import "vendor/fontawesome/brands";
 @import "vendor/fontawesome/regular";
 @import "vendor/fontawesome/solid";
+@import "vendor/slick/slick";
+@import "vendor/slick/slick-theme";
 
 /* Global */
 @import "global/_variables";
-@import "global/fonts";
+@import "global/_fonts";
 @import "global/_global";
 @import "global/_header";
 @import "global/_navigation";
 @import "global/_social-sharing";
 
 /* Blocks */
+@import "../../template-parts/blocks/index";
 
 /* Pages */
-@import "pages/_home";
+@import "pages/_home"; 
