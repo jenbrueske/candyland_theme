@@ -31,6 +31,9 @@
 					<div class="header--flex">
 					<div class="header--left header--column">
 						<a class="btn myAccount" href="/my-account/" target="_self">My Account</a>
+						<div class="headerImage">
+							<img alt="" src="/wp-content/themes/candylandstore/images/FamousSince1932.png">
+						</div>
 					</div>
 					<div class="header--center header--column">
 					<div class="logo">
@@ -39,12 +42,19 @@
 					</div>
 					</div>
 					<div class="header--right header--column">
-					TESTING PIPLINE</div>
+						<div class="headerImage">
+							<img alt="" src="wp-content/themes/candylandstore/images/Mpls-StPaul-Stillwater.png">
+						</div>
 					</div>
-					<div class=" nav">
+					</div>
+					<div class="nav">
 						<nav role="navigation" class="mainNav">
 							<?php wp_nav_menu( array( 'theme_location' => 'main-navigation' ) ); ?>
 						</nav>
+						<div class="navCart">
+							<div class="navCart--overlay"></div>
+						<?php echo do_shortcode("[woo_cart_but]"); ?>
+						</div>
 					</div>
 				</div>
 				</div>

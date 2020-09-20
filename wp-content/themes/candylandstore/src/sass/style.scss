@@ -5,11 +5,14 @@
 @import "vendor/fontawesome/solid";
 
 /* Global */
-@import "global/fonts";
 @import "global/_variables";
+@import "global/fonts";
 @import "global/_global";
 @import "global/_header";
 @import "global/_navigation";
 @import "global/_social-sharing";
 
 /* Blocks */
+
+/* Pages */
+@import "pages/_home";

@@ -40,3 +40,22 @@
 
 $header-font: 'Quintessential', cursive;
 $default-font: 'Open Sans', sans-serif;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font;
+    color: $dk_maroon;
+    text-align: center;
+}
+
+h1, .h1-font {
+    font-size: 36px;
+}
+
+body {
+    font-family: $default-font;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.7;
+}

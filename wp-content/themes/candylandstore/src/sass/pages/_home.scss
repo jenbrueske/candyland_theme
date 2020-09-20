@@ -1,0 +1,9 @@
+.home {
+    .post {
+        h1 {
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+}

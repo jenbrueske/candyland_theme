@@ -1,15 +1,24 @@
 .nav {
-    margin-top: -8px;
+    display: flex;
+    justify-content: space-between;
+    margin: -8px 10px 0px;
     background-color: rgba(180, 0, 0, 0);
     background: url(/wp-content/themes/candylandstore/images/menu-ribbon.png);
     background-position: top center;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     text-align: center;
-    padding: 8px 15px 32px 15px;
+    position: relative;
+    // padding: 8px 15px 32px 15px;
+    .mainNav {
+        padding: 5px 0px 25px;
+    }
     a {
         color: $white;
         font-family: $default-font;
         text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
     }
     ul {
         display: flex;
@@ -20,7 +29,65 @@
             display: none;
         }
         li {
-            padding: 0px 5px;
+            padding: 0px 10px;
+            &:not(:last-child) {
+                border-right: 1px solid $white;
+            }
         }
+    }
+    .navCart {
+        // margin-top: -8px;
+        padding-right: 20px;
+        position: absolute;
+        right: 10px;
+    }
+    .navCart--overlay {
+        width: 56px;
+        height: 96px;
+        border: none;
+        background-color: transparent;
+        background: url(/wp-content/themes/candylandstore/images/ribbon.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .cart-contents--wrapper {
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-100%);
+    }
+    .cart-contents {
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        color: $white;
+    }
+    
+    .cart-contents:before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;	
+        content: "\f07a";
+        font-size: 22px;
+    }
+    
+    .cart-contents:hover {
+        color: $maroon;
+    }
+    
+    .cart-contents-count {
+        position: absolute;
+        top: 15px;
+        right: -10px;
+        transform: translateY(-105%) translateX(25%);
+        font-family: $default-font;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 22px;
+        height: 22px;
+        width: 22px;
+        vertical-align: middle;
+        text-align: center;
     }
 }
