@@ -1,7 +1,3 @@
-// this is a test comment
-// .home p {
-//     color: blue !important;
-// }
 .heroSlider {
     position: relative;
     height: 100%;
@@ -27,6 +23,7 @@
     .slick-dots li button:before {
         font-size: 20px;
     }
-
+    &.underHeader {
+        margin-top: -25px;
+    }
 }
-// second test comment

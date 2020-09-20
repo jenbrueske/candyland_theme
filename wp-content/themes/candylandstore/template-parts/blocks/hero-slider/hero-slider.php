@@ -26,14 +26,14 @@ if( !empty($block['align']) ) {
 
 // Load values and assign defaults.
 $desktop_slider = get_field('desktop_slider') ?: 'Your images here...';
-$tablet_slider = get_field('tablet_slider') ?: 'Your images here...';
-$mobile_slider = get_field('mobile_slider') ?: 'Your images here...';
+$underHeader = get_field('under_header');
+$underHeaderClass = $underHeader ? 'underHeader' : '';
 
 ?>
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> <?php echo $underHeaderClass; ?>">
         <?php
         if( $desktop_slider ): ?>
-            <div class="heroSlider flexSlider">
+            <div class="flexSlider">
                 <div class="heroSlides">
                     <?php foreach( $desktop_slider as $desktop_slide ): ?>
                         <div>

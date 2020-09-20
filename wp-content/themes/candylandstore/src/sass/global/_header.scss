@@ -1,6 +1,6 @@
 .header {
-    .header--wrapper {
-    }
+    position: relative;
+    z-index: 999999;
     .header--flex {
         padding: 30px 0px 10px;
         display: flex;
@@ -27,8 +27,5 @@
     }
     .logo {
         max-width: 500px;
-    }
-    .btn {
-        
     }
 }
