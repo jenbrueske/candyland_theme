@@ -46,7 +46,7 @@ function my_acf_init_block_types() {
             'keywords'          => array( 'hero', 'slider' ),
         ));
 
-        // register a testimonial block.
+        // register a product carousel block.
         acf_register_block_type(array(
             'name'              => 'product-carousel',
             'title'             => __('Product Carousel'),
@@ -55,6 +55,17 @@ function my_acf_init_block_types() {
             'category'          => 'candyland-blocks',
             'icon'              => 'format-gallery',
             'keywords'          => array( 'product', 'carousel' ),
+        ));
+
+        // register a WYSIWYG block.
+        acf_register_block_type(array(
+            'name'              => 'custom-wysiwyg',
+            'title'             => __('Custom WYSIWYG'),
+            'description'       => __('A custom wysiwyg block.'),
+            'render_template'   => 'template-parts/blocks/custom-wysiwyg/custom-wysiwyg.php',
+            'category'          => 'candyland-blocks',
+            'icon'              => 'edit-large',
+            'keywords'          => array( 'wysiwyg', 'custom' ),
         ));
     }
 }
