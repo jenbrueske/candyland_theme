@@ -30,7 +30,7 @@ $underHeader = get_field('under_header');
 $underHeaderClass = $underHeader ? 'underHeader' : '';
 
 ?>
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> <?php echo $underHeaderClass; ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> <?php echo $underHeaderClass; ?>">
         <?php
         if( $desktop_slider ): ?>
             <div class="flexSlider">
@@ -43,4 +43,4 @@ $underHeaderClass = $underHeader ? 'underHeader' : '';
                 </div>
             </div>
         <?php endif; ?>
-</div>
+</section>

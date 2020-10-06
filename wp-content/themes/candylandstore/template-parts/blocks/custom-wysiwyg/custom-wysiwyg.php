@@ -33,6 +33,6 @@ $content = get_field('content') ?: 'Your content here';
 // $text_color = get_field('text_color');
 
 ?>
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> <?php if( $content_width == true ): ?>container<?php endif; ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> <?php if( $content_width == true ): ?>container<?php endif; ?>">
     <?php echo $content; ?>
-</div>
+</section>

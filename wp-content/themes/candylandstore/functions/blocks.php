@@ -64,8 +64,19 @@ function my_acf_init_block_types() {
             'description'       => __('A custom wysiwyg block.'),
             'render_template'   => 'template-parts/blocks/custom-wysiwyg/custom-wysiwyg.php',
             'category'          => 'candyland-blocks',
-            'icon'              => 'edit-large',
+            'icon'              => 'edit-page',
             'keywords'          => array( 'wysiwyg', 'custom' ),
+        ));
+
+        // register a columns block.
+        acf_register_block_type(array(
+            'name'              => 'custom-columns',
+            'title'             => __('Custom Columns'),
+            'description'       => __('A custom columns block.'),
+            'render_template'   => 'template-parts/blocks/custom-columns/custom-columns.php',
+            'category'          => 'candyland-blocks',
+            'icon'              => 'edit-page',
+            'keywords'          => array( 'columns', 'custom' ),
         ));
     }
 }

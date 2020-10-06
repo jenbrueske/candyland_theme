@@ -1,0 +1,31 @@
+.customColumns {
+    .customColumns__wrapper {
+        display: grid;
+        &.layout--one {
+            grid-template-columns: 1fr;
+        }
+        &.layout--two {
+            grid-template-columns: 1fr 1fr;
+        }
+        &.layout--three {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    .customColumns__image {
+        max-width: 100%;
+        max-height: 180px;
+
+    }
+    .customColumns__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .learnMoreButton__image {
+        max-width: 150px;
+    }
+    .customColumns__learnMoreButton {
+        margin: 20px 0px;
+    }
+}

@@ -9,3 +9,6 @@ function wpdocs_theme_name_scripts() {
     wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/dist/js/all.js' );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
+
+// Add backend styles for Gutenberg.
+add_action('enqueue_block_editor_assets', 'wpdocs_theme_name_scripts');
