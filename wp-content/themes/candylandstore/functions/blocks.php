@@ -44,6 +44,7 @@ function my_acf_init_block_types() {
             'category'          => 'candyland-blocks',
             'icon'              => 'images-alt2',
             'keywords'          => array( 'hero', 'slider' ),
+            'mode'              => 'edit'
         ));
 
         // register a product carousel block.
@@ -55,6 +56,7 @@ function my_acf_init_block_types() {
             'category'          => 'candyland-blocks',
             'icon'              => 'format-gallery',
             'keywords'          => array( 'product', 'carousel' ),
+            'mode'              => 'edit'
         ));
 
         // register a WYSIWYG block.
@@ -64,8 +66,9 @@ function my_acf_init_block_types() {
             'description'       => __('A custom wysiwyg block.'),
             'render_template'   => 'template-parts/blocks/custom-wysiwyg/custom-wysiwyg.php',
             'category'          => 'candyland-blocks',
-            'icon'              => 'edit-page',
+            'icon'              => 'admin-comments',
             'keywords'          => array( 'wysiwyg', 'custom' ),
+            'mode'              => 'edit'
         ));
 
         // register a columns block.
@@ -75,8 +78,33 @@ function my_acf_init_block_types() {
             'description'       => __('A custom columns block.'),
             'render_template'   => 'template-parts/blocks/custom-columns/custom-columns.php',
             'category'          => 'candyland-blocks',
-            'icon'              => 'edit-page',
+            'icon'              => 'admin-comments',
             'keywords'          => array( 'columns', 'custom' ),
+            'mode'              => 'edit'
+        ));
+
+        // register a divider block.
+        acf_register_block_type(array(
+            'name'              => 'divider',
+            'title'             => __('Divider'),
+            'description'       => __('A divider block.'),
+            'render_template'   => 'template-parts/blocks/divider/divider.php',
+            'category'          => 'candyland-blocks',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'divider', 'custom' ),
+            'mode'              => 'edit'
+        ));
+
+        // register a divider block.
+        acf_register_block_type(array(
+            'name'              => 'custom-content',
+            'title'             => __('Custom Content'),
+            'description'       => __('A custom content block.'),
+            'render_template'   => 'template-parts/blocks/custom-content/custom-content.php',
+            'category'          => 'candyland-blocks',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'content', 'custom' ),
+            'mode'              => 'edit'
         ));
     }
 }

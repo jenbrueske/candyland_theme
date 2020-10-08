@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Custom WYSIWYG Block Template.
+ * Custom Custom Columns Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).

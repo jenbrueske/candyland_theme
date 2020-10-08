@@ -1,0 +1,14 @@
+.divider {
+    &.topDivider {
+        padding-top: 100px;
+        background: url('../../images/top_gimmick.png') top center;
+    }
+    &.bottomDivider {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background: url('../../images/bottom_gimmick.png') top center;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        margin-top: 0;
+    }
+}
