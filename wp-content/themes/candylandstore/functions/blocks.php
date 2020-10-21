@@ -66,6 +66,7 @@ function my_acf_init_block_types() {
             'description'       => __('A custom wysiwyg block.'),
             'render_template'   => 'template-parts/blocks/custom-wysiwyg/custom-wysiwyg.php',
             'category'          => 'candyland-blocks',
+            'align_text'        => true,
             'icon'              => 'admin-comments',
             'keywords'          => array( 'wysiwyg', 'custom' ),
             'mode'              => 'edit'

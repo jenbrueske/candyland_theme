@@ -1,3 +1,64 @@
 .customContent {
-    
+    max-width: 100%;
+    .imageColumn {
+        position: relative;
+        flex-basis: 45%;
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    .contentColumn {
+        flex-basis: 45%;
+    }
+    .contentColumnItem {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &.right {
+            flex-direction: row-reverse;
+        }
+    }
+    .btn {
+        // margin: 20px;
+    }
+    .overlayTextWrapper {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.6);
+        color: white;
+        display: none;
+    }
+    .overlayText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .customContentImage {
+        flex-basis: 30%;
+        &.left {
+            padding-right: 20px;
+        }
+        &.right {
+            padding-left: 20px;
+        }
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    .customContentWysiwyg {
+        p {
+            margin-top: 0px;
+        }
+    }
 }

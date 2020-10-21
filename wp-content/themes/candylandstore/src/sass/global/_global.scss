@@ -7,7 +7,16 @@
     color: $white;
     background-color: $maroon;
     padding: 13px 17px;
-
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 15px;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 3px;
 }
 
 body {
@@ -16,11 +25,21 @@ body {
 
 a {
     text-decoration: none;
-    font-family: $header-font;
+    font-family: $default-font;
+    color: #c12c2c;
+    &:hover {
+        color: #911d1d;
+    }
 }
 
 #adminmenu a {
     font-family: $default-font;
+}
+
+.overlay {
+    a {
+        color: #fec428;
+    }
 }
 
 .edit-post-sidebar {
@@ -58,4 +77,15 @@ a {
 
 .hidden {
     display: none;
+}
+
+.wp-admin .wp-block {
+    max-width: 1200px;
+    margin: 25px 50px !important;
+}
+
+.aligncenter {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
 }

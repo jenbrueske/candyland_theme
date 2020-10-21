@@ -33,35 +33,46 @@ $background_color = get_field('background_color');
 
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>" style="background-color: <?php echo $background_color; ?>">
-    <div class="container">
-    <div class="imageColumn">
+    <div class="container <?php echo $image_position; ?>" style="background-color: <?php echo $background_color; ?>">
+    <div class="imageColumn <?php if( $image_overlay == true ): ?>overlay<?php endif; ?>">
         <?php 
-            echo $image_position;
-            echo $image['url'];
-            echo $image_overlay;
-            echo $image_overlay_text;
-            echo $background_color;
-        ?>
+            // echo $image_position;
+            // echo $image['url'];
+            // echo $image_overlay;
+            // echo $image_overlay_text;
+            // echo $background_color;
+            ?>
+        <?php if( $image_overlay == true ): ?>    
+            <div class="overlayTextWrapper">
+                <div class="overlayText">
+                    <?php echo $image_overlay_text; ?>
+                </div>
+            </div>
+        <?php endif; ?>
+        <img src="<?php echo $image['url']; ?>" />
+    <?php    ?>
     </div>
-    <div class="flexibleContent">
-        <?php if( have_rows('flexible_content') ): ?>
-            <?php while( have_rows('flexible_content') ): the_row(); ?>
-                <?php if( get_row_layout() == 'image' ):
-                    $contentImage = the_sub_field('image');
+    <div class="contentColumn">
+        <?php if( have_rows('column_content') ): ?>
+            <?php while( have_rows('column_content') ): the_row();
+                    $contentImage = get_sub_field('image');
                     $contentImage_position = get_sub_field('image_position');
-                    echo $contentImage['url'];
-                    echo $contentImage_position; 
-                    ?>
-                <?php elseif( get_row_layout() == 'content' ): 
                     $content = get_sub_field('content');
-                    echo $content;
-                ?>
-                <?php elseif( get_row_layout() == 'button' ): 
                     $button = get_sub_field('button');
-                    echo $button['url'];
-                    $button_position = get_sub_field('button_position');
-                ?>
-                <?php endif; ?>
+                    $button_position = get_sub_field('button_position'); 
+                    ?>
+                    <div class="contentColumnItem">
+                        <div class="customContentImage <?php echo $contentImage_position; ?>">
+                            <img src="<?php echo $contentImage['url']; ?>" />
+                        </div>
+                        <div class="customContentWysiwyg">
+                            <?php echo $content; ?>
+                        </div>
+                    </div>
+                    <div class="contentColumnButton">
+                        <a class="btn" href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>"><?php echo $button['title']; ?></a>
+                    </div>
+                    
             <?php endwhile; ?>
         <?php endif; ?>
     </div>
