@@ -1,0 +1,111 @@
+.productSlider {
+    position: relative;
+    // height: 100%;
+    // background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+    padding-bottom: 30px;
+    img {
+        height: auto;
+        width: 100%;
+        max-height: 150px;
+        max-width: 150px;
+        margin: 0 auto;
+    }
+    .productSlides {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease;
+        -webkit-transition: opacity 1s ease;
+        &.slick-initialized {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .slick-dots {
+        bottom: 5px;
+    }
+
+    .slick-dots li button:before {
+        font-size: 20px;
+    }
+    
+    li.product {
+        border: 1px solid #ebebeb;
+        padding: 20px;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .woocommerce-loop-product__title {
+        font-size: 18px;
+        text-align: center;
+        color: $lt_maroon;
+    }
+    .price {
+        background-color: $lt_maroon;
+        color: $white;
+        text-align: center;
+        padding: 0 10px;
+    }
+    .add_to_cart_button {
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        &::before {
+            font-family: 'Font Awesome\ 5 Free';
+            content: '\f07a';
+            padding-right: 10px;
+            font-weight: bold;
+        }
+    }
+    .woocommerce-LoopProduct-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .slick-track
+    {
+        display: flex !important;
+    }
+
+    .slick-slide
+    {
+        height: inherit !important;
+    }
+    .slick-prev {
+        left: calc(100% - 55px);
+        top: -20px;
+        &::before {
+            color: $black;
+        }
+    }
+    .slick-next {
+        right: 10px;
+        top: -20px;
+        &::before {
+            color: $black;
+        }    
+    }
+    .slick-dots {
+        bottom: calc(100% + 10px);
+        width: auto;
+        right: 60px;
+        li {
+            display: none;
+            &:nth-of-type(4n+1) {
+                display: inline-block;
+            }
+        }
+    }
+    .onsale {
+        width: 100%;
+        background: $lt_maroon;
+        color: #fff;
+        font-weight: normal;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}

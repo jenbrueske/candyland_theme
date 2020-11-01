@@ -19,14 +19,62 @@
         text-transform: uppercase;
         font-size: 14px;
         font-weight: bold;
+        &:hover {
+            color: $yellow;
+        }
     }
     ul {
         display: flex;
         padding-left: 0px;
         list-style-type: none;
         justify-content: space-around;
+        .current-menu-item {
+            a {
+                color: $yellow;
+            }
+        }
         .sub-menu {
+            a {
+                color: $black;
+                font-weight: normal;
+                text-transform: none;
+                &:hover {
+                    color: $maroon;
+                }
+            }
+            .current-menu-item {
+                a {
+                    color: $maroon;
+                }
+            }
             display: none;
+            position: absolute;
+            background-color: $lt_yellow;
+            text-align: left;
+            .menu-item-has-children {
+                &:after {
+                    content: '>';
+                    color: #fff;
+                    float: right;
+                }
+            }
+            .sub-menu {
+                left: 100%;
+                top: 0;
+                width: 100%;
+                border-left: 1px solid $black;
+                a {
+                    font-size: 12px;
+                }
+            }
+            li {
+                position: relative;
+                border-right-width: 0px !important;
+                &:not(:first-child) {
+                    border-top: 1px solid $yellow;
+                }
+                padding: 11px 15px;
+            }
         }
         li {
             padding: 0px 10px;
