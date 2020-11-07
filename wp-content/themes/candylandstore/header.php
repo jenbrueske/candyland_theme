@@ -47,7 +47,7 @@
 						</div>
 					</div>
 					</div>
-					<div class="nav">
+					<div class="nav" id="nav">
 						<nav role="navigation" class="mainNav">
 							<?php wp_nav_menu( array( 'theme_location' => 'main-navigation' ) ); ?>
 						</nav>

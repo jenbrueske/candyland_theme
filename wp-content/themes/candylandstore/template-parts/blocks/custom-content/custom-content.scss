@@ -2,7 +2,7 @@
     max-width: 100%;
     .imageColumn {
         position: relative;
-        flex-basis: 45%;
+        flex-basis: 50%;
         img {
             max-width: 100%;
             width: 100%;
@@ -10,6 +10,10 @@
     }
     .contentColumn {
         flex-basis: 45%;
+    }
+    .contentColumnButton {
+        margin-bottom: 30px;
+        width: 100%;
     }
     .contentColumnItem {
         display: flex;
@@ -21,6 +25,7 @@
         align-items: center;
         &.right {
             flex-direction: row-reverse;
+            margin-right: 2px;
         }
     }
     .btn {
@@ -45,6 +50,7 @@
     }
     .customContentImage {
         flex-basis: 30%;
+        min-width: 86px;
         &.left {
             padding-right: 20px;
         }
