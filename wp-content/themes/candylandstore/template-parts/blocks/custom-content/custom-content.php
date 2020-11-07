@@ -67,10 +67,10 @@ $background_color = get_field('background_color');
                         </div>
                         <div class="customContentWysiwyg">
                             <?php echo $content; ?>
+                            <div class="contentColumnButton">
+                                <a class="btn" href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>"><?php echo $button['title']; ?></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contentColumnButton">
-                        <a class="btn" href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>"><?php echo $button['title']; ?></a>
                     </div>
                     
             <?php endwhile; ?>

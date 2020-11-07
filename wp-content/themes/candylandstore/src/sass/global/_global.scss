@@ -13,10 +13,14 @@
     outline: none;
     cursor: pointer;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     border: none;
     letter-spacing: 1px;
     border-radius: 3px;
+    &:hover {
+        background-color: $white;
+        border: 1px solid $maroon;
+    }
 }
 
 body {

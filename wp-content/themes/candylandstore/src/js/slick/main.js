@@ -11,8 +11,16 @@ jQuery(document).ready(function( $ ) {
         $(this).find('.sub-menu').first().hide(); 
     });
 
-    $('.btn.myAccount').on('mouseenter', function () {
-        console.log('button is being hovered');
-    });
+    // When the user scrolls down 20px from the top of the document, slide down the navbar
+    // When the user scrolls to the top of the page, slide up the nav (50px out of the top view)
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+        $('body').addClass('fixedNav');
+    } else {
+        $('body').removeClass('fixedNav');
+    }
+    }
     
-    });
+});
