@@ -19,5 +19,8 @@ include 'functions/ajax-nav-cart.php';
 //register acf gutenberg blocks
 include 'functions/blocks.php';
 
+//register acf gutenberg blocks
+include 'functions/theme-supports.php';
+
 //disable auto-save on pages and posts
 // include 'functions/autosave.php';

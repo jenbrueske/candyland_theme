@@ -4,10 +4,15 @@
  */
 ?> 
 
-            <footer>
+            <footer class="footerWrapper">
             	<div class="container">
-	                <?php wp_footer(); ?>
-	                &copy;<?php echo date('Y'); ?>
+					<div class="footer">
+
+					</div>
+					<div class="copyright">
+						<?php wp_footer(); ?>
+						Candyland Store &copy;<?php echo date('Y'); ?>
+					</div>
                 </div>
             </footer>
 		</div> <!-- end .wrapper -->

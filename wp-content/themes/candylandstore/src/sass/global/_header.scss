@@ -1,6 +1,10 @@
 .header {
     position: relative;
     z-index: 999999;
+    .header--wrapper {
+        position: relative;
+        width: 100%;
+    }
     .header--flex {
         padding: 30px 0px 10px;
         display: flex;
@@ -11,22 +15,93 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
         text-align: center;
+        @media (max-width: $tablet_portrait) {
+            background-size: 200% 130%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            align-items: center;
+            justify-items: start;
+            padding-bottom: 15px;
+            background-position: center;
+        }
+        @media (max-width: $mobile_large) {
+            min-height: 210px;
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
     }
     .header--column {
         flex-basis: 30%;
         padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: $tablet_portrait) {
+            padding: 5px !important;
+        }
     }
     .header--left {
         padding-left: 20px;
+        @media (max-width: $mobile) {
+            display: none;
+        }
         .headerImage {
             margin-top: 30px;
+            @media (max-width: $desktop) {
+                max-width: 250px;
+            }
+            @media (max-width: $tablet-mid) {
+                max-width: 200px;
+            }
+            @media (max-width: $tablet_portrait) {
+                grid-column-start: 2;
+                grid-row-start: 2;
+                margin-top: 0px;
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    .header--center {
+        @media (max-width: $tablet_portrait) {
+            grid-column-start: 1;
+            grid-row: 1 / span 2;
         }
     }
     .header--right {
-        padding-right: 30px;
+        padding-right: 50px;
+        @media (max-width: $mobile) {
+            display: none;
+        }
+        .headerImage {
+            @media (max-width: $desktop) {
+                max-width: 250px;
+            }
+            @media (max-width: $tablet-mid) {
+                max-width: 200px;
+            }
+            @media (max-width: $tablet_portrait) {
+                grid-column-start: 2;
+            }
+            img {
+                max-width: 100%;
+            }
+        }
     }
     .logo {
         max-width: 500px;
+        img {
+            max-width: 100%;
+        }
+        @media (max-width: $desktop) {
+            max-width: 350px;
+        }
+        @media (max-width: $tablet_portrait) {
+            max-width: 100%;
+        }
     }
     .myAccount {
         font-family: 'Quintessential', cursive;

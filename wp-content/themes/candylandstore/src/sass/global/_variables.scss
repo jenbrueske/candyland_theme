@@ -3,10 +3,21 @@ $white: #ffffff;
 $maroon: #a02325;
 $dk_maroon: #7c0000;
 $lt_maroon: #c12c2c;
-$black: #000000;
+$black: #1d1d1d;
 $yellow: #ffbb00;
 $lt_yellow: #ffd259;
+$grey: #888888;
 
 
 /* Settings */
 $container: 1200px;
+
+/* Breakpoints */
+$desktop: 1200px;
+$desktop_small: 1080px;
+$tablet_landscape: 1024px;
+$tablet_mid: 925px;
+$tablet_portrait: 768px;
+$mobile_large: 625px;
+$mobile: 500px;
+$mobile_small: 320px;

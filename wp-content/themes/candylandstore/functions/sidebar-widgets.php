@@ -23,6 +23,5 @@ function arphabet_widgets_init() {
 		'before_title'  => '<h2 class="rounded">',
 		'after_title'   => '</h2>',
 	) );
-
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );

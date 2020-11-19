@@ -1,6 +1,9 @@
 .container {
     max-width: $container;
     margin: 0 auto;
+    @media (max-width: $tablet_portrait) {
+        max-width: 100%;
+    }
 }
 
 .btn {
@@ -25,6 +28,10 @@
 
 body {
     color: #383838;
+    // @media (max-width: $tablet_portrait) {
+    //     padding: 0;
+    //     width: 100%;
+    // }
 }
 
 a {
@@ -68,14 +75,50 @@ a {
 }
 
 .main {
-    .container {
-        &:first-child {
+    .mainContainer {
             background: #fafaea;
             margin-top: -50px;
-            padding: 50px 0px;
-            max-width: 1130px;
-            width: 94%;
+            padding: 50px 0px 0px;
+            max-width: calc( #{$container} - 50px );
+            width: 100%;
+            @media (max-width: $desktop) {
+                max-width: calc( 100vw - 50px );
+            }
+            @media (max-width: $tablet_portrait) {
+                max-width: 100%;
+                padding: 25px 0px 0px;
+                margin-top: 0px;
+            }
         }
+    }
+
+.archive #primary {
+    background: #fafaea;
+    margin-top: -50px;
+    padding: 50px 0px 0px;
+    max-width: calc( #{$container} - 50px );
+    width: 100%;
+    margin: -50px auto 0px;
+    @media (max-width: $desktop) {
+        max-width: calc( 100vw - 50px );
+    }
+    @media (max-width: $tablet_portrait) {
+        max-width: 100%;
+    }
+}
+
+.single-product #primary {
+    background: #fafaea;
+    margin-top: -50px;
+    padding: 100px 0px 0px;
+    max-width: calc( #{$container} - 50px );
+    width: 100%;
+    margin: -50px auto 0px;
+    @media (max-width: $desktop) {
+        max-width: calc( 100vw - 50px );
+    }
+    @media (max-width: $tablet_portrait) {
+        max-width: 100%;
     }
 }
 
@@ -92,4 +135,54 @@ a {
     margin: 0 auto;
     text-align: center;
     display: block;
+}
+
+.admin-bar {
+    margin-top: 14px;
+}
+
+.viewAll {
+    font-size: 21px;
+    text-align: center;
+}
+
+#custom-wysiwyg-block_5fac86fe1c76a {
+    text-align: center;
+    z-index: 99999;
+    background-color: #ffffff;
+    margin-top: -45px;
+    position: relative;
+    padding-top: 0;
+}
+
+#productSlider-block_5fac7f42fc120 {
+    padding-top: 30px;
+    .product-slider {
+        .slick-dots {
+            bottom: calc( 100% +15px );
+        }
+    }
+}
+
+.wpcf7-form {
+    input[type="text"], textarea, input[type="email"] {
+        padding: 8px 10px;
+        background-color: #eaeaea;
+        border-style: solid;
+    }
+    input[type="submit"] {
+        background-color: #a02325!important;
+    color: #fff!important;
+    margin-right: 5px!important;
+    font-weight: 500!important;
+    text-transform: uppercase;
+    font-size: 13px!important;
+    appearance: none;
+    padding: 8px 10px;
+    border: solid;
+    }
+}
+
+.page-id-59095 .wp-block-columns {
+    margin-bottom: 0px;
 }

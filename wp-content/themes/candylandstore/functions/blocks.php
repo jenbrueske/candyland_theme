@@ -107,5 +107,17 @@ function my_acf_init_block_types() {
             'keywords'          => array( 'content', 'custom' ),
             'mode'              => 'edit'
         ));
+
+        // register a blog block.
+        acf_register_block_type(array(
+            'name'              => 'blog-section',
+            'title'             => __('Blog Section'),
+            'description'       => __('Shows 2 most recent blog posts'),
+            'render_template'   => 'template-parts/blocks/blog-section/blog-section.php',
+            'category'          => 'candyland-blocks',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'blog', 'custom' ),
+            'mode'              => 'edit'
+        ));
     }
 }

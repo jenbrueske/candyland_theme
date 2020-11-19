@@ -1,0 +1,17 @@
+.footerWrapper {
+    .copyright {
+        background-color: $black;
+        color: $grey;
+        padding: 15px 0px 15px 30px;
+        max-width: 100%;
+    }
+    .footer {
+        background-color: $maroon;
+        color: $grey;
+        min-height: 50px;
+        max-width: 100%;
+    }
+    .container {
+        max-width: calc( #{$container} - 50px );
+    }
+}

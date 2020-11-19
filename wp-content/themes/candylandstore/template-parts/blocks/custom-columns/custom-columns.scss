@@ -1,6 +1,9 @@
 .customColumns {
     .customColumns__wrapper {
         display: grid;
+        @media (max-width: $tablet_portrait) {
+            display: block;
+        }
         &.layout--one {
             grid-template-columns: 1fr;
         }

@@ -26,6 +26,8 @@ if( !empty($block['align']) ) {
 
 // Load values and assign defaults.
 $product_category = get_field('product_category');
+$category_title = get_term($product_category)->name;
+$category_slug = get_term($product_category)->slug;
 $background_color = get_field('background_color');
 echo '<script type="text/javascript">console.log("background_color: ", ' . json_encode( $background_color ) . ');</script>';
 $args = array (
@@ -54,6 +56,9 @@ echo '<script type="text/javascript">console.log("product_query: ", ' . json_enc
                     endwhile;
                 ?>
                 </div>
+            </div>
+            <div class="viewAll">
+                <a href="/product-category/<?php echo $category_slug; ?>">View All <?php echo $category_title; ?></a>
             </div>
         <?php endif; ?>
 </section>

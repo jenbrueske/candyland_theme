@@ -15,12 +15,14 @@ jQuery(document).ready(function( $ ) {
     // When the user scrolls to the top of the page, slide up the nav (50px out of the top view)
     window.onscroll = function() {scrollFunction()};
 
-    function scrollFunction() {
-    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-        $('body').addClass('fixedNav');
-    } else {
-        $('body').removeClass('fixedNav');
+function scrollFunction() {
+    if (window.screen.width > 768) {
+        if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+            $('body').addClass('fixedNav');
+        } else {
+            $('body').removeClass('fixedNav');
+        }
     }
-    }
+}   
     
 });

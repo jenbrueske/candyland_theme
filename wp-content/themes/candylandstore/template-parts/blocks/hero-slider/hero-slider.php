@@ -25,21 +25,24 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
-$desktop_slider = get_field('desktop_slider') ?: 'Your images here...';
 $underHeader = get_field('under_header');
 $underHeaderClass = $underHeader ? 'underHeader' : '';
 
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> <?php echo $underHeaderClass; ?>">
         <?php
-        if( $desktop_slider ): ?>
+        if( have_rows('desktop_slider') ): ?>
             <div class="flexSlider">
                 <div class="heroSlides">
-                    <?php foreach( $desktop_slider as $desktop_slide ): ?>
+                    <?php while ( have_rows('desktop_slider' ) ): the_row();
+                        $slide_image = get_sub_field('slide_image');
+                        // var_dump($slide_image);
+                        $slide_link = get_sub_field('slide_link'); 
+                    ?>
                         <div>
-                            <img src="<?php echo esc_url($desktop_slide['url']); ?>" alt="<?php echo esc_attr($desktop_slide['alt']); ?>" />
+                            <?php if($slide_link): ?><a href="<?php echo $slide_link['url']; ?>" target="<?php echo $slide_link['target']; ?> "><?php endif; ?><img src="<?php echo esc_url($slide_image['url']); ?>" alt="<?php echo esc_attr($slide_image['alt']); ?>" /><?php if($slide_link): ?></a><?php endif; ?>
                         </div>
-                    <?php endforeach; ?>
+                    <?php endwhile; ?>
                 </div>
             </div>
         <?php endif; ?>

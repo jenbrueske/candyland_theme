@@ -9,9 +9,39 @@
     background-size: 100% 100%;
     text-align: center;
     position: relative;
-    // padding: 8px 15px 32px 15px;
+    @media (max-width: $tablet_portrait) {
+        background-image: none;
+        margin: 0;
+        // background-color: $black;
+        padding: 0;
+        display: block;
+        position: absolute;
+        top: 242px;
+        // border: 1px solid blue;
+        width: 100vw;
+    }
+    @media (max-width: $mobile_large) {
+        top: 240px;
+    }
+    @media (max-width: $mobile_small) {
+        top: 75%;
+    }
+    .slicknav_icon {
+        font-size: 24px;
+    }
     .mainNav {
         padding: 5px 0px 25px;
+    }
+    .mobileMenu {
+        display: none;
+        @media (max-width: $tablet_portrait) {
+            display: block;
+        }
+    }
+    .menu {
+        @media (max-width: $tablet_portrait) {
+            display: none;
+        }
     }
     a {
         color: $white;
@@ -22,12 +52,18 @@
         &:hover {
             color: $yellow;
         }
+        @media (max-width: $tablet_mid) {
+            font-size: 12px;
+        }
     }
     ul {
         display: flex;
         padding-left: 0px;
         list-style-type: none;
         justify-content: space-around;
+        @media (max-width: $tablet_portrait) {
+            display: block;
+        }
         .current-menu-item {
             a {
                 color: $yellow;
@@ -89,6 +125,9 @@
         padding-right: 20px;
         position: absolute;
         right: 10px;
+        @media (max-width: $tablet_portrait) {
+            top: 0px;
+        }
     }
     .navCart--overlay {
         width: 56px;
@@ -99,6 +138,9 @@
         background-position: top center;
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        @media (max-width: $tablet_portrait) {
+            display: none;
+        }
     }
     .cart-contents--wrapper {
         position: absolute;
@@ -139,6 +181,15 @@
         vertical-align: middle;
         text-align: center;
     }
+    @media (max-width: $desktop_small) {
+        .hidesmall {
+            display: none;
+        }
+    }
+}
+
+.fixedLogo {
+    display: none;
 }
 
 .fixedNav {
@@ -151,4 +202,23 @@
     .main {
         padding-top: 80px;
     }
+    .fixedLogo {
+        display: block;
+        padding-top: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        img {
+            max-height: 55px;
+        }
+    }
+    .hidesmall {
+        display: none;
+    }
+    .nav {
+        justify-content: flex-start;
+    }
+    .mainNav {
+        padding: 10px 76px 25px 0px;
+    }
 }
+

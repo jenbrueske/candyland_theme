@@ -1,5 +1,6 @@
 .customContent {
     max-width: 100%;
+    padding-top: 30px;
     .imageColumn {
         position: relative;
         flex-basis: 50%;
@@ -10,6 +11,9 @@
     }
     .contentColumn {
         flex-basis: 45%;
+        @media (max-width: $tablet_portrait) {
+            padding-top: 30px;
+        }
     }
     .contentColumnButton {
         margin-bottom: 30px;
@@ -18,14 +22,25 @@
     .contentColumnItem {
         display: flex;
         margin-bottom: 10px;
+        @media (max-width: $tablet_portrait) {
+            margin-bottom: 0px;
+        }
     }
     .container {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        @media (max-width: $tablet_portrait) {
+            display: block;
+        }
         &.right {
             flex-direction: row-reverse;
             margin-right: 2px;
+            padding-left: 30px;
+            @media (max-width: $tablet_portrait) {
+                margin-right: 0px;
+                padding-right: 30px;
+            }
         }
     }
     .btn {

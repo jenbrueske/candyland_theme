@@ -32,13 +32,13 @@
 					<div class="header--left header--column">
 						<a class="btn myAccount" href="/my-account/" target="_self">My Account</a>
 						<div class="headerImage">
-							<img alt="" src="/wp-content/themes/candylandstore/images/FamousSince1932.png">
+							<img alt="Famous Since 1932" src="/wp-content/themes/candylandstore/images/FamousSince1932.png">
 						</div>
 					</div>
 					<div class="header--center header--column">
 					<div class="logo">
 						<?php $image = get_field('header_logo', 'option'); ?>
-						<a href="<?php bloginfo('url'); ?>"><img alt="logo" src="<?php echo $image['url']; ?>" /></a>					
+						<a href="<?php bloginfo('url'); ?>"><img alt="Candyland logo" src="<?php echo $image['url']; ?>" /></a>					
 					</div>
 					</div>
 					<div class="header--right header--column">
@@ -47,7 +47,12 @@
 						</div>
 					</div>
 					</div>
+					<div class="mobileMenu"></div>
 					<div class="nav" id="nav">
+						<div class="fixedLogo">
+						<?php $image = get_field('header_logo', 'option'); ?>
+							<a href="<?php bloginfo('url'); ?>"><img alt="Candyland logo" src="<?php echo $image['url']; ?>" /></a>					
+						</div>
 						<nav role="navigation" class="mainNav">
 							<?php wp_nav_menu( array( 'theme_location' => 'main-navigation' ) ); ?>
 						</nav>
