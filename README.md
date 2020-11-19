@@ -8,3 +8,6 @@ Custom theme for WordPress specific to a client.
 - Custom built theme
 - WooCommerce template edits
 
+### In Action ###
+https://candylandstore.com
+
